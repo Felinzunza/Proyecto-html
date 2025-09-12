@@ -6,7 +6,7 @@ const form = document.querySelector('.needs-validation'); // busca el formulario
 
 form.addEventListener('submit', event => {
   if (!form.checkValidity() || !validarPass() || !validarRut() ||!validarNombre()||!validarApellido()
-       ||!validarEmail()) {
+       ||!validarEmail()|| !validarDireccion()) {
     event.preventDefault();
     event.stopPropagation();
   }
@@ -80,6 +80,17 @@ function validarApellido(){
     } else {
         document.getElementById("checkemail").innerHTML = "✅";
         return true;
+    }
+}
+
+function validarDireccion(){
+    let direccion = document.getElementById("direccion").value.trim();
+    if(direccion.length > 0 && apellido.length <= 300) {
+        document.getElementById("checkdireccion").innerHTML = "✅";
+        return true;
+    }else{
+         document.getElementById("checkdireccion").innerHTML ="Direccion incorrecta ⛔";
+         return false;
     }
 }
 
