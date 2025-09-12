@@ -186,71 +186,38 @@
                     <div class="invalid-feedback">Fecha no válida</div>
                   </div>
 
+                          <!-- Tipo Usuario -->
+        <div class="mb-3">
+          <label for="tipousuario" class="form-label">Tipo de Usuario:</label>
+          <select class="form-control" id="tipousuario" required>
+            <option value="">Seleccione...</option>
+            <option value="Administrador">Administrador</option>
+            <option value="Vendedor">Vendedor</option>
+            <option value="Cliente">Cliente</option>
+          </select>
+          <div class="invalid-feedback">Debe seleccionar un tipo de usuario</div>
+        </div>
 
-                  <div class="mb-3 mt-3">
-                    <label for="Tipo de usuario" class="form-label">TipoUsuario:</label>
-                    <select
-                      class="form-control"
-                      id="tipousuario"
-                      name="tipousuario"
-                      required
-                    >
-                      <option value="">Seleccione el rol del usuario</option>
-                      <option value="Administrador">Administrador</option>
-                      <option value="Vendedor">Vendedor</option>
-                      <option value="Cliente">Cliente</option>
-                      <!-- Agrega más regiones según necesites -->
-                    </select>
-                    <div class="invalid-feedback">
-                      Debe seleccionar un tipo de usuario
-                    </div>
-                  </div>
-               
+        <!-- Región -->
+        <div class="mb-3">
+          <label for="region" class="form-label">Región:</label>
+          <select class="form-control" id="region" required>
+            <option value="">Seleccione una región</option>
+          </select>
+          <div class="invalid-feedback">Debe seleccionar una región</div>
+        </div>
 
-                  <div class="mb-3 mt-3">
-                    <label for="region" class="form-label">Región:</label>
-                    <select
-                      class="form-control"
-                      id="region"
-                      name="region"
-                      required
-                    >
-                      <option value="">Seleccione una región</option>
-                      <option value="Bio Bio">Bio Bio</option>
-                      <option value="Metropolitana">Metropolitana</option>
-                      <option value="Valparaíso">Valparaíso</option>
-                      <!-- Agrega más regiones según necesites -->
-                    </select>
-                    <div class="invalid-feedback">
-                      Debe seleccionar una región
-                    </div>
-                  </div>
+        <!-- Comuna -->
+        <div class="mb-3">
+          <label for="comuna" class="form-label">Comuna:</label>
+          <select class="form-control" id="comuna" required>
+            <option value="">Seleccione una comuna</option>
+          </select>
+          <div class="invalid-feedback">Debe seleccionar una comuna</div>
+        </div>
 
 
-                  <div class="mb-3 mt-3">
-                    <label for="comuna" class="form-label">Comuna:</label>
-                    <select
-                      class="form-control"
-                      id="comuna"
-                      name="comuna"
-                      required
-                    >
-                      <option value="">Seleccione una comuna</option>
-                      <option value="Lota">Lota</option>
-                      <option value="Concepción">Concepción</option>
-                      <option value="Coronel">Coronel</option>
-                      <option value="San Pedro">San Pedro</option>
-                      <option value="Viña del Mar">Viña del Mar</option>
-                      <option value="Valparaíso">Valparaíso</option>
-                      <option value="Quilpué">Quilpué</option>
-                      <option value="Santiago">Santiago</option>
-                      <option value="Maipú">Maipú</option>
-                      <option value="Puente Alto">Puente Alto</option>
-                      <!-- Agrega más comunas según necesites -->
-                    </select>
-                    <div class="invalid-feedback">
-                      Debe seleccionar una comuna
-                    </div>
+
                     
                   </div>
                   <div class="mt-2 text-center">

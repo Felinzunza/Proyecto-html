@@ -45,7 +45,7 @@ function validarRut(){
 
 function validarNombre(){
     let nombre = document.getElementById("nombre").value.trim();;
-    if(nombre.length < 50) {
+    if(nombre.length > 0 && nombre.length <= 50 ) {
         document.getElementById("checknombre").innerHTML = "✅";
         return true;
     }else{
@@ -57,7 +57,7 @@ function validarNombre(){
 
 function validarApellido(){
     let apellido = document.getElementById("apellido").value.trim();
-    if(apellido.length <= 100) {
+    if(apellido.length > 0 && apellido.length <= 100) {
         document.getElementById("checkapellido").innerHTML = "✅";
         return true;
     }else{
