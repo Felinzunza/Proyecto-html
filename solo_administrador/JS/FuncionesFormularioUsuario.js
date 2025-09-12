@@ -34,7 +34,7 @@ function validarPass(){
 // Validación básica de RUT
 function validarRut(){
   let rut = document.getElementById("rut").value;
-  if(rut.charAt(rut.length - 2) === '-' && !rut.includes(".") && rut.length >= 7 && rut.length <= 9){
+  if(!rut.includes(".") && rut.length >= 7 && rut.length <= 9){
     document.getElementById("checkrut").innerHTML = "✅";
     return true;
   } else {
@@ -93,10 +93,6 @@ function validarDireccion(){
          return false;
     }
 }
-
-
-
-
 
 
 // Ejemplo de arreglo
