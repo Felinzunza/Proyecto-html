@@ -1,0 +1,180 @@
+/* ...existing code... */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+
+}
+
+h1 {
+  font-family: Orbitron;
+  color: white;
+  font-size: 32px;
+}
+
+h2 {
+  font-family: Orbitron;
+  font-size: 16px;
+  color: white;
+}
+
+
+p {
+  font-family: Roboto, sans-serif;
+  font-size: 15px;
+  color: #D3D3D3;
+  
+  
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 180px;
+  height: 100vh;
+  background: #42156b;
+  color: #fff;
+  padding: 20px 0;
+  
+}
+
+
+
+.contenido {
+  
+  margin-left: 250px; /* igual al ancho del sidebar */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra verticalmente */
+
+}
+
+
+.sidebar a {
+  text-decoration: none;
+  color: yellow !important;
+  font-weight: bold;
+  font-size: 25px;
+}
+.sidebar a:hover {
+  color: red !important;
+}
+/* ...existing code... */
+
+.sidebar, .sidebar h2, .sidebar a, .sidebar ul, .sidebar li {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.sidebar, .sidebar h2, .sidebar a, .sidebar ul, .sidebar li {
+  font-family: 'Orbitron', sans-serif !important;
+  font-size: 16px !important; /* Ajusta el tamaño según lo que prefieras */
+  line-height: 1.2 !important;
+  letter-spacing: 1px !important;
+}
+
+.sidebar h2 {
+  font-size: 20px !important;
+  font-weight: bold !important;   /* <-- Hace el texto bold */
+  margin-bottom: 20px !important; /* <-- Espacio debajo del título */
+  margin-top: 20px !important;    /* <-- Espacio arriba del título */
+  text-align: center !important;  /* <-- Centra el texto */
+}
+
+
+.sidebar ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+.sidebar a {
+  display: block !important;
+  padding: 10px 20px !important;
+  color: yellow !important;
+  font-weight: bold !important;
+  text-decoration: none !important;
+  font-size: 22px !important;
+}
+
+.sidebar a:hover {
+  color: red !important;
+}
+
+.form-label {
+  color: whitesmoke;
+}
+
+.shadow {
+  background-color: #42156b;
+}
+
+.invalid-feedback{
+  color: yellow
+}
+
+.btn-nuevo{
+  background-color: red;
+  color: #39FF14
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 8px;
+  text-align: left;
+  background-color: #42156b;
+}
+
+th {
+  background-color: #6d2eb7;
+  font-weight: bold;
+}
+
+
+
+.btn-nuevo {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: #42156b;
+  color: yellow;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-nuevo:hover {
+  background-color: yellow;
+  color: #42156b;
+}
+
+.btn-editar {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: #42156b;
+  color: yellow;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-editar:hover {
+  background-color: yellow;
+  color: #42156b;
+}
