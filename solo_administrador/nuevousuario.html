@@ -44,27 +44,54 @@
 
                 <form
                   action="listausuarios.html"
-                  class="was-validated"
+                  class="needs-validation"
                   method="get"
                   enctype="multipart/form-data"
+                  novalidate
                 >
                   <h2>Registrar nuevo usuario</h2>
 
+
                   <div class="mb-3 mt-3">
-                    <label for="nomb" class="form-label"
-                      >Nombre completo:</label>
+                    <label for="nombre" class="form-label"
+                      >Nombre:</label>
                     >
                     <input
                       type="text"
                       class="form-control"
-                      id="nomb"
-                      placeholder="Ingrese nombre completo"
-                      name="nomb"
+                      onblur="validarNombre()"
+                      id="nombre"
+                      placeholder="Ingrese nombre"
+                      name="nombre"
                       required
                     />
                      <div class="invalid-feedback">
                       Debe ingresar nombre 
                      </div>
+                     <div 
+                        id="checknombre" style="color:rgb(255, 174, 0); margin-top:5px">
+                    </div>
+
+
+                     <div class="mb-3 mt-3">
+                    <label for="apellido" class="form-label"
+                      >Apellidos de usuario:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="apellido"
+                      onblur="validarApellido()"
+                      placeholder="Ingrese apellidos"
+                      name="apellido"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Debe ingresar apellidos
+                    </div>
+                    <div 
+                        id="checkapellido" style="color:rgb(255, 174, 0); margin-top:5px">
+                    </div>
+                  </div>
 
 
                   <div class="mb-3 mt-3">
@@ -87,23 +114,26 @@
                         id="checkrut" style="color:rgb(255, 174, 0); margin-top:5px">
                     </div>
                   </div>
+                
 
 
                   <div class="mb-3 mt-3">
-                    <label for="uname" class="form-label"
-                      >Nombre de usuario:</label>
+                    <label for="mail" class="form-label">E-mail:</label>
                     <input
-                      type="text"
+                      type="email"
                       class="form-control"
-                      id="uname"
-                      placeholder="Ingrese nombre de usuario"
-                      name="uname"
+                      id="mail"
+                      onblur="validarEmail()"
+                      placeholder="Ingrese correo electrónico"
+                      name="mail"
                       required
                     />
-                    <div class="invalid-feedback">
-                      Debe ingresar nombre de usuario
-                    </div>
+                    <div class="invalid-feedback">Correo no válido</div>
                   </div>
+                   <div 
+                        id="checkemail" style="color:rgb(255, 174, 0); margin-top:5px">
+                   </div>
+                 
 
 
                   <div class="mb-3 mt-3">
@@ -117,8 +147,6 @@
                       required
                     />
                     <div class="invalid-feedback">Debe ingresar password</div>
-                   
-                    
                   </div>
 
 
@@ -151,7 +179,7 @@
                       type="date"
                       class="form-control"
                       id="fecha"
-                      placeholder="Ingrese correo electrónico"
+                      placeholder="Ingrese fecha de nacimiento"
                       name="fecha"
                       required
                     />
@@ -160,18 +188,24 @@
 
 
                   <div class="mb-3 mt-3">
-                    <label for="mail" class="form-label">E-mail:</label>
-                    <input
-                      type="email"
+                    <label for="Tipo de usuario" class="form-label">TipoUsuario:</label>
+                    <select
                       class="form-control"
-                      id="mail"
-                      placeholder="Ingrese correo electrónico"
-                      name="mail"
+                      id="tipousuario"
+                      name="tipousuario"
                       required
-                    />
-                    <div class="invalid-feedback">Correo no válido</div>
+                    >
+                      <option value="">Seleccione el rol del usuario</option>
+                      <option value="Administrador">Administrador</option>
+                      <option value="Vendedor">Vendedor</option>
+                      <option value="Cliente">Cliente</option>
+                      <!-- Agrega más regiones según necesites -->
+                    </select>
+                    <div class="invalid-feedback">
+                      Debe seleccionar un tipo de usuario
+                    </div>
                   </div>
-
+               
 
                   <div class="mb-3 mt-3">
                     <label for="region" class="form-label">Región:</label>
@@ -206,11 +240,18 @@
                       <option value="Concepción">Concepción</option>
                       <option value="Coronel">Coronel</option>
                       <option value="San Pedro">San Pedro</option>
+                      <option value="Viña del Mar">Viña del Mar</option>
+                      <option value="Valparaíso">Valparaíso</option>
+                      <option value="Quilpué">Quilpué</option>
+                      <option value="Santiago">Santiago</option>
+                      <option value="Maipú">Maipú</option>
+                      <option value="Puente Alto">Puente Alto</option>
                       <!-- Agrega más comunas según necesites -->
                     </select>
                     <div class="invalid-feedback">
                       Debe seleccionar una comuna
                     </div>
+                    
                   </div>
                   <div class="mt-2 text-center">
                     <input
@@ -232,6 +273,30 @@
         </div>
       </div>
     </div>
+    <script>
+  // Script de validación de Bootstrap
+  (function () {
+    "use strict";
+
+    // Selecciona todos los formularios con la clase needs-validation
+    var forms = document.querySelectorAll(".needs-validation");
+
+    Array.prototype.slice.call(forms).forEach(function (form) {
+      form.addEventListener(
+        "submit",
+        function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault(); // ❌ evita enviar
+            event.stopPropagation();
+          }
+          form.classList.add("was-validated"); // ✅ activa los estilos de error
+        },
+        false
+      );
+    });
+  })();
+</script>
+
     <script src="JS/FuncionesFormularioUsuario.js"></script>
   </body>
 </html>
