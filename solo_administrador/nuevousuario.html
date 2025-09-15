@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Nuevo Usuario</title>
 
     <!-- Latest compiled and minified CSS -->
     <link
@@ -19,6 +19,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/estilobarra.css" />
+
+
   </head>
 
   <body>
@@ -54,13 +56,14 @@
 
                   <div class="mb-3 mt-3">
                     <label for="nombre" class="form-label"
-                      >Nombre:</label>
+                      >Nombre de usuario:</label>
                     >
                     <input
                       type="text"
                       class="form-control"
                       onblur="validarNombre()"
                       id="nombre"
+                      style="background-image:none; padding-right:0.75rem"
                       placeholder="Ingrese nombre"
                       name="nombre"
                       required
@@ -80,11 +83,12 @@
                       type="text"
                       class="form-control"
                       id="apellido"
+                      style="background-image:none; padding-right:0.75rem" 
                       onblur="validarApellido()"
                       placeholder="Ingrese apellidos"
                       name="apellido"
                       required
-                    />
+                    />  <!--quito la validacion de bootstrap en style-->
                     <div class="invalid-feedback">
                       Debe ingresar apellidos
                     </div>
@@ -103,6 +107,7 @@
                       class="form-control"
                       onblur="validarRut()"
                       id="rut"
+                      style="background-image:none; padding-right:0.75rem"
                       placeholder="Ingrese rut"
                       name="rut"
                       required
@@ -123,6 +128,7 @@
                       type="email"
                       class="form-control"
                       id="mail"
+                      style="background-image:none; padding-right:0.75rem"
                       onblur="validarEmail()"
                       placeholder="Ingrese correo electrónico"
                       name="mail"
@@ -142,6 +148,7 @@
                       type="password"
                       class="form-control"
                       id="pass"
+                      style="background-image:none; padding-right:0.75rem" 
                       placeholder="Ingrese clave"
                       name="pass"
                       required
@@ -171,20 +178,20 @@
                   </div>
 
 
-                  <div class="mb-3 mt-3">
-                    <label for="fecha" class="form-label"
-                      >Fecha de nacimiento:</label
-                    >
-                    <input
-                      type="date"
-                      class="form-control"
-                      id="fecha"
-                      placeholder="Ingrese fecha de nacimiento"
-                      name="fecha"
-                      required
-                    />
-                    <div class="invalid-feedback">Fecha no válida</div>
-                  </div>
+        <div class="mb-3 mt-3">
+          <label for="fecha" class="form-label">Fecha de nacimiento:</label>
+          <input
+            type="date"
+            class="form-control"
+            id="fecha"
+            style="background-image:none; padding-right:0.75rem"
+            onblur = "validarFecha()"
+            name="fecha"
+            required
+          />
+          <div class="invalid-feedback">Fecha no válida</div>
+          <div id="checkfecha" style="color: rgb(255, 174, 0); margin-top:5px"></div>
+        </div>
 
                           <!-- Tipo Usuario -->
         <div class="mb-3">
@@ -237,8 +244,6 @@
                      <div 
                         id="checkdireccion" style="color:rgb(255, 174, 0); margin-top:5px">
                     </div>
-
-
 
                     
                   </div>

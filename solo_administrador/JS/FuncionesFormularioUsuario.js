@@ -72,7 +72,10 @@ function validarApellido(){
     if (
         mail.length > 100 ||
         !(mail.endsWith("@duoc.cl") || 
+          mail.endsWith("@duocuc.cl") ||
+          mail.endsWith("@profesor.duouc.cl")||
           mail.endsWith("@profesor.duoc.cl") || 
+          mail.endsWith("@gmail.com.cl")||
           mail.endsWith("@gmail.com"))
     ) {
         document.getElementById("checkemail").innerHTML = "Correo incorrecto ⛔";
@@ -83,16 +86,24 @@ function validarApellido(){
     }
 }
 
-function validarDireccion(){
-    let direccion = document.getElementById("direccion").value.trim();
-    if(direccion.length > 0 && apellido.length <= 300) {
-        document.getElementById("checkdireccion").innerHTML = "✅";
-        return true;
-    }else{
-         document.getElementById("checkdireccion").innerHTML ="Direccion incorrecta ⛔";
-         return false;
-    }
+function validarFecha() {
+  
+  let fecha = new Date(document.getElementById("fecha").value); // convertir string a fecha
+
+  let min = new Date("1900-01-01"); 
+  let hoy = new Date();
+ 
+
+  if (fecha < min || fecha > hoy) {
+    document.getElementById("checkfecha").innerHTML = "Fecha incorrecta ⛔";
+    return false;
+  } else {
+    document.getElementById("checkfecha").innerHTML = "✅";
+    return true;
+  }
 }
+
+
 
 
 // Ejemplo de arreglo

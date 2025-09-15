@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+
+}
+
+h1 {
+  font-family: Orbitron;
+  color: white;
+  font-size: 32px;
+}
+
+h2 {
+  font-family: Orbitron;
+  font-size: 16px;
+  color: white;
+}
+
+
+p {
+  font-family: Roboto, sans-serif;
+  font-size: 15px;
+  color: #D3D3D3;
+  
+  
+}
+
+
+.form-label {
+  color: whitesmoke;
+}
+
+.shadow {
+  background-color: #42156b;
+}
+
+.invalid-feedback{
+  color: yellow
+}
+
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 8px;
+  text-align: left;
+  background-color: #42156b;
+}
+
+th {
+  background-color: #6d2eb7;
+  font-weight: bold;
+}
+
+
+
+.btn-nuevo {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: #42156b;
+  color: yellow;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-nuevo:hover {
+  background-color: yellow;
+  color: #42156b;
+}
+
+.btn-editar {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: #42156b;
+  color: yellow;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-editar:hover {
+  background-color: yellow;
+  color: #42156b;
+}
+
