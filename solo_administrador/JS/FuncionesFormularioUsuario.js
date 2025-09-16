@@ -18,6 +18,9 @@ form.addEventListener('submit', event => {
 // Cuando la página cargue, activamos la validación
 document.addEventListener("DOMContentLoaded", activarValidacionBootstrap);
 
+
+
+
 // Validación de contraseñas
 function validarPass(){
   let pass = document.getElementById("pass").value;
@@ -66,7 +69,7 @@ function validarApellido(){
     }
 }
 
-    function validarEmail() {
+function validarEmail() {
     let mail = document.getElementById("mail").value;
 
     if (

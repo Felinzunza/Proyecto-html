@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin-left: 1;
   padding: 0;
   box-sizing: border-box;
   background-color: black;
@@ -101,3 +101,41 @@ th {
   color: #42156b;
 }
 
+
+
+.contenido {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 20px;
+}
+
+.alerta {
+  background-color: yellow; /* rojo claro */
+  color: red;           /* rojo fuerte */
+  font-weight: bold;
+}
+
+.btn-warning {
+  color: yellow
+}
+
+
+/* Estilo al input file */
+input[type="file"] {
+  color: yellow;   /* texto "Sin archivos seleccionados" en amarillo */
+  
+}
+
+/* Estilo al botón */
+input[type="file"]::file-selector-button {
+  background-color: #198754; /* verde */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: #157347;
+}

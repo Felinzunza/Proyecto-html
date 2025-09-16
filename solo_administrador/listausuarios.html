@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="css/estilogeneral.css" />
     <link rel="stylesheet" href="css/estilobarra.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap"
@@ -16,7 +18,7 @@
       <h2>Aquí puedes ver y editar usuarios.</h2>
       <div>
         <a href="nuevousuario.html" class="btn-nuevo">+ Nuevo Usuario</a>
-        <a href="nuevousuario.html" class="btn-editar">Editar Usuario</a>
+        
         
       </div>
       <div>
@@ -31,21 +33,27 @@
           </tr>
 
           <tr>
-            <th>12345678-9</th>
-            <th>Pablo Nerurda</th>
-            <th>PablitoNeftaliR@gmail.com</th>
-            <th>01-02-1905</th>
-            <th>Cliente</th>
-            <th>Calle falsa 123, Concepcion, Bio Bio</th>
-           
+            <td>12345678-9</td>
+            <td>Pablo Neruda</td>
+            <td>PablitoNeftaliR@gmail.com</td>
+            <td>01-02-1905</td>
+            <td>Cliente</td>
+            <td>Calle falsa 123, Concepción</td>
+            <td>
+              <a href="editarusuario.html?rut=12345678-9" class="btn btn-warning btn-sm">Editar</a>
+            </td>
           </tr>
+
           <tr>
-             <th>43434312-1</th>
-            <th>Victor Jara</th>
-            <th>VitotoJ@gmail.com</th>
-            <th>01-02-1910</th>
-            <th>Vendedor</th>
-            <th>Calle de mentira 321, Puente Alto, Santiago</th>
+            <td>43434312-1</td>
+            <td>Victor Jara</td>
+            <td>VitotoJ@gmail.com</td>
+            <td>01-02-1910</td>
+            <td>Vendedor</td>
+            <td>Calle de mentira 321, Santiago</td>
+            <td>
+              <a href="editarusuario.html?rut=43434312-1" class="btn btn-warning btn-sm">Editar</a>
+            </td>
           </tr>
         </table>
       </div>
@@ -57,7 +65,7 @@
       <ul>
         <li><a href="homedmin.html" target="contenido">Home</a></li>
         <li><a href="listausuarios.html" target="contenido">Usuarios</a></li>
-        <li><a href="listaproductos.html" target="contenido">Inventario</a></li>
+        <li><a href="listaproductos.html" target="contenido">Productos</a></li>
       </ul>
     </nav>
   </body>

@@ -3,20 +3,265 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/estilogeneral.css" />
     <link rel="stylesheet" href="css/estilobarra.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap"
       rel="stylesheet"
-      
     />
-
-
-    <title>Inventario</title>
+    <title>Productos</title>
   </head>
   <body>
-    <div id="inventario" class="contenido">
-      <h1>Inventario</h1>
-      <h2>Aquí puedes administrar el inventario.</h2>
+    <div id="productos" class="contenido">
+      <h1>Gestión de productos</h1>
+      <h2>Aquí puedes ver y editar productos.</h2>
+      <div>
+        <a href="nuevoproducto.html" class="btn-nuevo">+ Nuevo Producto</a>
+      </div>
+      <div>
+        <table border="1" cellpadding="8" cellspacing="0">
+          <tr>
+            <th>Código</th>
+            <th>Nombre</th>
+            <th>Categoría</th>
+            <th>Descripcion</th>
+            <th>Precio</th>
+            <th>Stock Actual</th>
+            <th>Stock Crítico</th>
+            <th>Imagen</th>
+            <th>Acción</th>
+          </tr>
+
+          <tr>
+            <td>JM001</td>
+            <td>Catan</td>
+            <td>Juegos de Mesa</td>
+            <td>
+              Construir poblados, ciudades y caminos; negociación de recursos y
+              cartas.
+            </td>
+            <td>$29.990 CLP</td>
+            <td class="stock-actual">9</td> <!--aplicar alerta-->
+            <td class="stock-critico">10</td><!--me servira para comparar con stock actual y obtener la muestra-->
+            <td>
+              <a href="img/catan.jpg" class="btn btn-warning btn-sm" target="_blank">Ver Imagen</a>
+            </td>
+            <td>
+              <a
+                href="editarproducto.html?codigo=JM001"
+                class="btn btn-warning btn-sm"
+                >Editar</a
+              >
+            </td>
+          </tr>
+
+
+          <tr>
+            <td>JM002</td>
+            <td>Carcassonne</td>
+            <td>Juegos de Mesa</td>
+            <td>
+              Colocar losetas para construir ciudades y caminos; mecánica
+              estratégica accesible.
+            </td>
+            <td>$24.990 CLP</td>
+            <td class="stock-actual">30</td> <!--aplicar alerta-->
+            <td class="stock-critico">10</td><!--me servira para comparar con stock actual y obtener la muestra-->
+            <td>
+              <a href="img/catan.jpg" class="btn btn-warning btn-sm" target="_blank">Ver Imagen</a>
+            </td>
+            <td>
+              <a
+                href="editarproducto.html?codigo=JM002"
+                class="btn btn-warning btn-sm"
+                >Editar</a
+              >
+            </td>
+          </tr>
+
+          <tr>
+            <td>AC001</td>
+            <td>Controlador Inalámbrico Xbox Series X</td>
+            <td>Accesorios</td>
+            <td>
+              Control inalámbrico con ergonomía y botones programables para Xbox
+              Series X/S y PC.
+            </td>
+            <td>$59.990 CLP</td>
+            <td class="stock-actual">30</td> <!--aplicar alerta-->
+            <td class="stock-critico">10</td><!--me servira para comparar con stock actual y obtener la muestra-->
+            <td>
+              <a href="img/catan.jpg" class="btn btn-warning btn-sm" target="_blank">Ver Imagen</a>
+            </td>
+            <td>
+              <a
+                href="editarproducto.html?codigo=AC001"
+                class="btn btn-warning btn-sm"
+                >Editar</a
+              >
+            </td>
+          </tr>
+
+          <tr>
+            <td>AC002</td>
+            <td>Auriculares Gamer HyperX Cloud II</td>
+            <td>Accesorios</td>
+            <td>
+              Auriculares con sonido envolvente, micrófono desmontable y
+              almohadillas confort.
+            </td>
+            <td>$79.990 CLP</td>
+            <td class="stock-actual">30</td> <!--aplicar alerta-->
+            <td class="stock-critico">10</td><!--me servira para comparar con stock actual y obtener la muestra-->
+            <td>
+              <a href="img/catan.jpg" class="btn btn-warning btn-sm" target="_blank">Ver Imagen</a>
+            </td>
+            <td>
+              <a
+                href="editarproducto.html?codigo=AC002"
+                class="btn btn-warning btn-sm"
+                >Editar</a
+              >
+            </td>
+          </tr>
+
+          <tr>
+            <td>CO001</td>
+            <td>PlayStation 5</td>
+            <td>Consolas</td>
+            <td>
+              Consola de última generación con SSD ultrarrápido, audio 3D y
+              mando DualSense.
+            </td>
+            <td>$549.990 CLP</td>
+            <td class="stock-actual">30</td> <!--aplicar alerta-->
+            <td class="stock-critico">10</td><!--me servira para comparar con stock actual y obtener la muestra-->
+            <td>
+              <a href="img/catan.jpg" class="btn btn-warning btn-sm" target="_blank">Ver Imagen</a>
+            </td>
+            <td>
+              <a
+                href="editarproducto.html?codigo=CO001"
+                class="btn btn-warning btn-sm"
+                >Editar</a
+              >
+            </td>
+          </tr>
+
+          <tr>
+            <td>CG001</td>
+            <td>PC Gamer ASUS ROG Strix</td>
+            <td>Computadores Gamers</td>
+            <td>
+              PC de alto rendimiento para gaming con GPU potente y refrigeración
+              avanzada.
+            </td>
+            <td>$1.299.990 CLP</td>
+            <td class="stock-actual">30</td> <!--aplicar alerta-->
+            <td class="stock-critico">10</td><!--me servira para comparar con stock actual y obtener la muestra-->
+            <td>
+              <a href="img/catan.jpg" class="btn btn-warning btn-sm" target="_blank">Ver Imagen</a>
+            </td>
+            <td>
+              <a
+                href="editarproducto.html?codigo=CG001"
+                class="btn btn-warning btn-sm"
+                >Editar</a
+              >
+            </td>
+          </tr>
+
+          <tr>
+            <td>SG001</td>
+            <td>Silla Gamer Secretlab Titan</td>
+            <td>Sillas Gamers</td>
+            <td>
+              Silla ergonómica con soporte lumbar ajustable y tapizado premium.
+            </td>
+            <td>$349.990 CLP</td>
+            <td class="stock-actual">30</td> <!--aplicar alerta-->
+            <td class="stock-critico">10</td><!--me servira para comparar con stock actual y obtener la muestra-->
+            <td>
+              <a href="img/catan.jpg" class="btn btn-warning btn-sm" target="_blank">Ver Imagen</a>
+            </td>
+            <td>
+              <a
+                href="editarproducto.html?codigo=SG001"
+                class="btn btn-warning btn-sm"
+                >Editar</a
+              >
+            </td>
+          </tr>
+
+          <tr>
+            <td>MS001</td>
+            <td>Mouse Gamer Logitech G502 HERO</td>
+            <td>
+              Mouse gaming con sensor HERO, múltiples botones programables y
+              ajuste de peso.
+            </td>
+            <td>Mouse</td>
+            <td>$49.990 CLP</td>
+            <td class="stock-actual">30</td> <!--aplicar alerta-->
+            <td class="stock-critico">10</td><!--me servira para comparar con stock actual y obtener la muestra-->
+            <td>
+              <a href="img/catan.jpg" class="btn btn-warning btn-sm" target="_blank">Ver Imagen</a>
+            </td>
+            <td>
+              <a
+                href="editarproducto.html?codigo=MS001"
+                class="btn btn-warning btn-sm"
+                >Editar</a
+              >
+            </td>
+          </tr>
+
+          <tr>
+            <td>MP001</td>
+            <td>Mousepad</td>
+            <td>Mousepad Razer Goliathus Extended Chroma</td>
+            
+            <td>
+              Alfombrilla extendida con iluminación Chroma y superficie
+              optimizada para control.
+            </td>
+            <td>$29.990 CLP</td>
+            <td class="stock-actual">30</td> <!--aplicar alerta-->
+            <td class="stock-critico">10</td><!--me servira para comparar con stock actual y obtener la muestra-->
+            <td>
+              <a href="img/catan.jpg" class="btn btn-warning btn-sm" target="_blank">Ver Imagen</a>
+            </td>
+            <td>
+              <a
+                href="editarproducto.html?codigo=MP001"
+                class="btn btn-warning btn-sm"
+                >Editar</a
+              >
+            </td>
+          </tr>
+
+          <tr>
+            <td>PP001</td>
+            <td>Polera Gamer Personalizada 'Level-Up'</td>
+            <td>Poleras Personalizadas</td>
+            <td>Polera 100% algodón con diseño personalizado 'Level-Up'.</td>
+            <td>$14.990 CLP</td>
+            <td class="stock-actual">30</td> <!--aplicar alerta-->
+            <td class="stock-critico">10</td><!--me servira para comparar con stock actual y obtener la muestra-->
+            <td>
+              <a href="img/catan.jpg" class="btn btn-warning btn-sm" target="_blank">Ver Imagen</a>
+            </td>
+            <td>
+              <a
+                href="editarproducto.html?codigo=PP001"
+                class="btn btn-warning btn-sm"
+                >Editar</a
+              >
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
 
     <!-- Sidebar -->
@@ -25,10 +270,11 @@
       <ul>
         <li><a href="homedmin.html" target="contenido">Home</a></li>
         <li><a href="listausuarios.html" target="contenido">Usuarios</a></li>
-        <li><a href="listaproductos.html" target="contenido">Inventario</a></li>
+        <li><a href="listaproductos.html" target="contenido">Productos</a></li>
       </ul>
     </nav>
 
+    <script src="JS/FuncionesTablaProducto.js"></script>
 
   </body>
 </html>
