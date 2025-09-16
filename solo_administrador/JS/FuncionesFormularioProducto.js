@@ -106,13 +106,14 @@ function validarStockCritico(){
         stockcritico =parseInt(stockcritico);
 
 
-    if(stockcritico >= 0) {
-    document.getElementById("stockcritico").innerHTML = "✅";
+    if(stockcritico < 0) {
+    document.getElementById("checkstockcritico").innerHTML = "stock incorrecto ⛔";
+    
     return true;
     }
     else
     {
-        document.getElementById("stockcritico").innerHTML = "stock incorrecto ⛔";
+        document.getElementById("checkstockcritico").innerHTML = "✅";
         return false;
     }
 }

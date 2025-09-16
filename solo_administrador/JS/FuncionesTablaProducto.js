@@ -2,7 +2,6 @@
 
 
 
-    document.addEventListener("DOMContentLoaded", () => {
     const filas = document.querySelectorAll("table tr");
 
     filas.forEach(fila => {
@@ -19,4 +18,4 @@
         }
       }
     });
-  });
+  ;

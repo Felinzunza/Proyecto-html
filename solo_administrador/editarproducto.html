@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nuevo Producto</title>
+    <title>Editar Producto</title>
 
     <!-- Latest compiled and minified CSS -->
     <link
@@ -36,7 +36,7 @@
       </ul>
     </nav>
 
-    <!--container de la caja de registro-->
+    <!--container de la caja de formulario-->
     <div class="contenido">
       <div class="container">
         <div>
@@ -44,7 +44,7 @@
             <div class="col-sm-7"></div>
             <div class="col-sm-6">
               <div class="shadow rounded p-4">
-                <h1 class="text-center">Registro de Productos</h1>
+                <h1 class="text-center">Modificar producto</h1>
 
                 <form
                   action="listaproductos.html"
@@ -53,8 +53,7 @@
                   enctype="multipart/form-data"
                   novalidate
                 >
-                  <h2>Registrar nuevo producto</h2>
-
+                  
                     <div class="mb-3 mt-3">
                     <label for="nombre" class="form-label"
                       >Codigo de producto:</label>
@@ -166,7 +165,7 @@
 
 
                   <div class="mb-3 mt-3">
-                    <label for="stockcritico" class="form-label">Stock critico:</label>
+                    <label for="stockcritico" class="form-label">Stockcritico:</label>
                     <input
                       type="number"
                       class="form-control"
@@ -183,10 +182,6 @@
                    </div>
                   </div>
 
-
-
-
-        
 
                                         <!-- Categoria -->
                    <div class="mb-3">
@@ -208,13 +203,10 @@
                     <input type="file" id="imagen" name="imagen" accept="image/*"><br><br>
                     </div>
 
-
-                    <div class="mt-2 text-center">
-                    <input
-                        class="btn btn-md btn-success px-1" 
-                        type="submit"
-                        value="Registrar"
-                    /></div>
+              <div class="mt-2 text-center">
+                <input class="btn btn-md btn-success px-1" type="submit" value="Guardar cambios" />
+                <a href="listaproductos.html" class="btn btn-md btn-secondary">Cancelar</a>
+              </div>
 
                 </form>
               </div>
@@ -224,6 +216,13 @@
         </div>
       </div>
     </div>
+    
+    <script >
+    // Rellenar el formulario con datos desde la URL (simulación básica)
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("codigo").value = params.get("codigo") || "";
+  </script>
+  
     <script>
   // Script de validación de Bootstrap
   (function () {
