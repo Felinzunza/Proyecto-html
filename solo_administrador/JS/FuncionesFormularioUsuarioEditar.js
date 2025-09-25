@@ -21,10 +21,6 @@ document.addEventListener("DOMContentLoaded", activarValidacionBootstrap);
 
 
 
-// =====================
-// Validaciones Editar Usuario
-// =====================
-
 // Validación básica de RUT
 function validarRut() {
   let rut = document.getElementById("rut").value;
