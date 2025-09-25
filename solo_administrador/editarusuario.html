@@ -40,7 +40,8 @@
               <form
                 action="listausuarios.html"
                 class="needs-validation"
-                method="post"
+                method="get"
+                enctype="multipart/form-data"
                 novalidate
               >
                 <h2>Actualizar datos del usuario</h2>
@@ -91,6 +92,7 @@
                     id="rut"
                     name="rut"
                     readonly
+                    
                   />
                   <div class="invalid-feedback">Debe ingresar rut</div>
                 </div>
@@ -161,10 +163,11 @@
 
                 <div class="mt-2 text-center">
                   <input
-                    class="btn btn-md btn-success px-1"
                     type="submit"
+                    class="btn btn-md btn-success px-1"
                     value="Guardar cambios"
                   />
+
                   <a href="listausuarios.html" class="btn btn-md btn-secondary"
                     >Cancelar</a
                   >
@@ -215,6 +218,6 @@
         });
       })();
     </script>
-    <script src="JS/FuncionesFormularioUsuario.js"></script>
+    <script src="JS/FuncionesFormularioUsuarioEditar.js"></script>
   </body>
 </html>

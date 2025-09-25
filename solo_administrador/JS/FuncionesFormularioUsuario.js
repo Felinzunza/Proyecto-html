@@ -141,3 +141,15 @@ regionSelect.addEventListener("change", function() {
 });
 
 
+
+
+function guardarCambios() {
+  const form = document.querySelector('.needs-validation');
+  
+  if (!form.checkValidity()) {
+    form.classList.add('was-validated'); 
+    return; // ❌ No redirige si está malo
+  }
+
+  form.requestSubmit(); // ✅ Se envía y redirige si está bueno
+}
