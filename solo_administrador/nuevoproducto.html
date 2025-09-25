@@ -215,14 +215,14 @@
                     <input type="file" id="imagen" name="imagen" accept="image/*"><br><br>
                     </div>
 
-
-                    <div class="mt-2 text-center">
+                  <div class="mt-2 text-center">
                     <input
-                        class="btn btn-md btn-success px-1" 
-                        type="submit"
-                        value="Registrar"
+                      class="btn btn-md btn-success px-1" 
+                      type="submit"
+                      value="Registrar"
                     />
-                     <a href="listaproductos.html" class="btn btn-md btn-secondary">Cancelar</a>
+                     <a href="listaproductos.html" 
+                     class="btn btn-md btn-secondary">Cancelar</a>
                   </div>
 
                 </form>
@@ -233,21 +233,27 @@
         </div>
       </div>
     </div>
-  <script>
-  document.getElementById("formEditar").addEventListener("submit", function (event) {
-    event.preventDefault(); // siempre detengo el submit
+<script>
+  (function () {
+    "use strict";
+    var forms =document.querySelectorAll(".needs-validation");
 
-    if (!this.checkValidity()) {
-      // ❌ hay errores → no redirigir
-      event.stopPropagation();
-      this.classList.add("was-validated");
-    } else {
-      // ✅ está válido → redirigir
-      alert("Cambios guardados con éxito");
-      window.location.href = "listausuarios.html";
-    }
-  });
+    Array.prototype.slice.call(forms).forEach(function (form) {
+      form.addEventListener(
+        "submit",
+        function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault(); // ❌ evita enviar
+            event.stopPropagation();
+          }
+          form.classList.add("was-validated"); // ✅ activa los estilos de error
+        },
+        false
+      );
+    });
+  })();
 </script>
+
 
     <script src="JS/FuncionesFormularioProducto.js"></script>
   </body>

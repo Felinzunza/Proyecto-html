@@ -38,31 +38,27 @@ function validarCodigo(){
 
 
 function validarNombreProducto(){
-    let nombrep = document.getElementById("nombrep");
+    
+    let nombrep = document.getElementById("nombrep").value.trim();
 
-    if(nombrep.length > 100) {
-    document.getElementById("checknombrep").innerHTML =  "nombre incorrecto ⛔";
-    return false;
-    }
-    else
-    {
-        document.getElementById("checknombrep").innerHTML = "✅";
+    if(nombrep.length === 0 || nombrep.length > 100) {
+        document.getElementById("checknombrep").innerHTML =  "Nombre incorrecto ⛔";
         return false;
+    } else {
+        document.getElementById("checknombrep").innerHTML = "✅";
+        return true;
     }
 }
 
 
 
 function validarDescripcion(){
-    let descripcion = document.getElementById("descripcion");
+    let descripcion = document.getElementById("descripcion").value.trim();
 
-    if(descripcion.length >= 500) {
-    document.getElementById("checkdescripcion").innerHTML = "descripcion incorrecta ⛔";
-    
-    return false;
-    }
-    else
-    {
+    if(descripcion.length === 0 || descripcion.length > 500) {
+        document.getElementById("checkdescripcion").innerHTML = "Descripción incorrecta ⛔";
+        return false;
+    } else {
         document.getElementById("checkdescripcion").innerHTML = "✅";
         return true;
     }
@@ -102,19 +98,13 @@ function validarStockActual(){
 
 
 function validarStockCritico(){
-    let stockcritico = document.getElementById("stockcritico").value;
-        stockcritico =parseInt(stockcritico);
+    let stockcritico = parseInt(document.getElementById("stockcritico").value);
 
-
-    if(stockcritico < 0) {
-    document.getElementById("checkstockcritico").innerHTML = "stock incorrecto ⛔";
-    
-    return true;
-    }
-    else
-    {
-        document.getElementById("checkstockcritico").innerHTML = "✅";
+    if(isNaN(stockcritico) || stockcritico < 0) {
+        document.getElementById("checkstockcritico").innerHTML = "Stock incorrecto ⛔";
         return false;
+    } else {
+        document.getElementById("checkstockcritico").innerHTML = "✅";
+        return true;
     }
 }
-
