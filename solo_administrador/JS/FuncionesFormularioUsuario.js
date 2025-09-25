@@ -37,7 +37,7 @@ function validarPass(){
 // Validación básica de RUT
 function validarRut(){
   let rut = document.getElementById("rut").value;
-  if(!rut.includes(".") && rut.length >= 7 && rut.length <= 9){
+  if(!rut.includes(".") && !rut.includes("-") && rut.length >= 7 && rut.length <= 9){
     document.getElementById("checkrut").innerHTML = "✅";
     return true;
   } else {
@@ -78,7 +78,6 @@ function validarEmail() {
           mail.endsWith("@duocuc.cl") ||
           mail.endsWith("@profesor.duouc.cl")||
           mail.endsWith("@profesor.duoc.cl") || 
-          mail.endsWith("@gmail.com.cl")||
           mail.endsWith("@gmail.com"))
     ) {
         document.getElementById("checkemail").innerHTML = "Correo incorrecto ⛔";

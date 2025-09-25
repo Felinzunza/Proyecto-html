@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", activarValidacionBootstrap);
 // Validación básica de RUT
 function validarRut() {
   let rut = document.getElementById("rut").value;
-  if (!rut.includes(".") && rut.length >= 7 && rut.length <= 9) {
+  if (!rut.includes(".") && !rut.includes("-")  && rut.length >= 7 && rut.length <= 9) {
     return true;
   } else {
     return false;
