@@ -207,6 +207,7 @@
                 <input class="btn btn-md btn-success px-1" type="submit" value="Guardar cambios" />
                 <a href="listaproductos.html" class="btn btn-md btn-secondary">Cancelar</a>
               </div>
+              
 
                 </form>
               </div>
@@ -220,7 +221,13 @@
     <script >
     // Rellenar el formulario con datos desde la URL (simulación básica)
     const params = new URLSearchParams(window.location.search);
-    document.getElementById("codigo").value = params.get("codigo") || "";
+  document.getElementById("codigo").value      = params.get("codigo") || "";
+  document.getElementById("nombrep").value     = params.get("nombre") || "";
+  document.getElementById("categoria").value   = params.get("categoria") || "";
+  document.getElementById("descripcion").value = params.get("descripcion") || "";
+  document.getElementById("precio").value      = params.get("precio") || "";
+  document.getElementById("stockactual").value = params.get("stockActual") || "";
+  document.getElementById("stockcritico").value= params.get("stockCritico") || "";
   </script>
   
     <script>

@@ -214,7 +214,9 @@
                         class="btn btn-md btn-success px-1" 
                         type="submit"
                         value="Registrar"
-                    /></div>
+                    />
+                     <a href="listaproductos.html" class="btn btn-md btn-secondary">Cancelar</a>
+                  </div>
 
                 </form>
               </div>
@@ -224,28 +226,20 @@
         </div>
       </div>
     </div>
-    <script>
-  // Script de validación de Bootstrap
-  (function () {
-    "use strict";
+  <script>
+  document.getElementById("formEditar").addEventListener("submit", function (event) {
+    event.preventDefault(); // siempre detengo el submit
 
-    // Selecciona todos los formularios con la clase needs-validation
-    var forms = document.querySelectorAll(".needs-validation");
-
-    Array.prototype.slice.call(forms).forEach(function (form) {
-      form.addEventListener(
-        "submit",
-        function (event) {
-          if (!form.checkValidity()) {
-            event.preventDefault(); // ❌ evita enviar
-            event.stopPropagation();
-          }
-          form.classList.add("was-validated"); // ✅ activa los estilos de error
-        },
-        false
-      );
-    });
-  })();
+    if (!this.checkValidity()) {
+      // ❌ hay errores → no redirigir
+      event.stopPropagation();
+      this.classList.add("was-validated");
+    } else {
+      // ✅ está válido → redirigir
+      alert("Cambios guardados con éxito");
+      window.location.href = "listausuarios.html";
+    }
+  });
 </script>
 
     <script src="JS/FuncionesFormularioProducto.js"></script>
