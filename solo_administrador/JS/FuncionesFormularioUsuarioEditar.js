@@ -6,7 +6,7 @@ const form = document.querySelector('.needs-validation'); // busca el formulario
 
 form.addEventListener('submit', event => {
   if (!form.checkValidity() || !!validarRut() ||!validarNombre()||!validarApellido()
-       ||!validarEmail()|| !validarDireccion()) {
+      ||!validarFecha() ||!validarEmail()|| !validarDireccion()) {
     event.preventDefault();
     event.stopPropagation();
   }
