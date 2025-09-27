@@ -1,52 +1,24 @@
-/* ...existing code... */
-
-
-
 .sidebar {
   position: fixed;
   left: 0;
   top: 0;
   width: 180px;
-  height: 100vh;
+  height: 100%;
   background: #42156b;
   color: #fff;
   padding: 20px 0;
-  
-}
-
-
-
-
-.sidebar a {
-  text-decoration: none;
-  color: yellow !important;
-  font-weight: bold;
-  font-size: 25px;
-}
-.sidebar a:hover {
-  color: red !important;
-}
-/* ...existing code... */
-
-.sidebar, .sidebar h2, .sidebar a, .sidebar ul, .sidebar li {
-  font-family: 'Roboto', sans-serif !important;
-}
-
-.sidebar, .sidebar h2, .sidebar a, .sidebar ul, .sidebar li {
   font-family: 'Orbitron', sans-serif !important;
-  font-size: 16px !important; /* Ajusta el tamaño según lo que prefieras */
+  font-size: 16px !important;
   line-height: 1.2 !important;
   letter-spacing: 1px !important;
 }
 
 .sidebar h2 {
   font-size: 20px !important;
-  font-weight: bold !important;   /* <-- Hace el texto bold */
-  margin-bottom: 20px !important; /* <-- Espacio debajo del título */
-  margin-top: 20px !important;    /* <-- Espacio arriba del título */
-  text-align: center !important;  /* <-- Centra el texto */
+  font-weight: bold !important;
+  margin: 20px 0 !important; /* margen arriba y abajo */
+  text-align: center !important;
 }
-
 
 .sidebar ul {
   list-style: none !important;
@@ -56,25 +28,13 @@
 .sidebar a {
   display: block !important;
   padding: 10px 20px !important;
-  color: yellow !important;
   font-weight: bold !important;
   text-decoration: none !important;
   font-size: 22px !important;
+  color: yellow !important;
+  transition: color 0.3s ease; /* efecto suave al pasar el mouse */
 }
 
 .sidebar a:hover {
   color: red !important;
 }
-
-.form-label {
-  color: whitesmoke;
-}
-
-.shadow {
-  background-color: #42156b;
-}
-
-.invalid-feedback{
-  color: yellow
-}
-

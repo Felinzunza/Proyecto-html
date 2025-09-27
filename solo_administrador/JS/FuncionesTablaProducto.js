@@ -13,7 +13,7 @@
         const stockCritico = parseInt(celdaStockCritico.textContent);
 
         if (stockActual < stockCritico) {
-          celdaStockActual.textContent = `${stockActual} ⚠️ Bajo stock`;
+          celdaStockActual.textContent = `${stockActual} 🚨Bajo stock`;
           celdaStockActual.classList.add("alerta");
         }
       }
