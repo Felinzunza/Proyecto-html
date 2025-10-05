@@ -35,10 +35,23 @@ h2 {
 
 
 p {
+  
   font-family: Roboto, sans-serif;
   font-size: 15px;
   color: #D3D3D3;
-  
+
+}
+
+.elemento{
+  color: white
+}
+
+.text-desc{
+  color: rgb(238, 255, 0);
+}
+.Desc-global{
+  -webkit-text-stroke: 0.01px yellow; 
+  color:rgb(255, 115, 0)
   
 }
 
