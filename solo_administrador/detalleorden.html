@@ -44,59 +44,71 @@
     </div>
   </div>
 
-        <!-- Encabezados -->
-        <div class="row fw-bold border-bottom pb-2 mb-2">
-          <div class="col-md-3 text-center">Producto</div>
-          <div class="col-md-2 text-center">Cantidad</div>
-          <div class="col-md-2 text-center">Precio Unitario</div>
-          <div class="col-md-2 text-center">Descuento</div>
-          <div class="col-md-3 text-center">Total</div>
-        </div>
+<!-- Tabla de productos con scroll solo para productos -->
+<div class="table-responsive mb-3">
+  <div style="min-width: 500px;"><!-- ancho mínimo para que no se junten las columnas -->
+    <!-- Encabezados -->
+    <div class="row fw-bold border-bottom pb-2 mb-2 text-center encabezado">
+      <div class="col-3">Producto</div>
+      <div class="col-2">Cantidad</div>
+      <div class="col-2">SubTotal</div>
+      <div class="col-2">Descuento</div>
+      <div class="col-3">Total</div>
+    </div>
 
-        <!-- Producto 1 -->
-        <div class="elemento row mb-2">
-          <div class="col-md-3 text-center">Producto A</div>
-          <div class="col-md-2 text-center">2</div>
-          <div class="col-md-2 text-center">$5.000</div>
-          <div class="col-md-2 text-center text-desc">-10%</div>
-          <div class="col-md-3 text-center">$9.000</div>
-        </div>
+    <!-- Producto 1 -->
+    <div class="row mb-2 text-center elemento align-items-center">
+      <div class="col-3 fw-semibold">Producto A</div>
+      <div class="col-2">2</div>
+      <div class="col-2">$10.000</div>
+      <div class="col-2 text-desc">-10%</div>
+      <div class="col-3">$9.000</div>
+    </div>
 
-        <!-- Producto 2 -->
-        <div class="elemento row mb-2">
-          <div class="col-md-3 text-center">Producto B</div>
-          <div class="col-md-2 text-center">1</div>
-          <div class="col-md-2 text-center">$7.500</div>
-          <div class="col-md-2 text-center">—</div>
-          <div class="col-md-3 text-center">$7.500</div>
-        </div>
+    <!-- Producto 2 -->
+    <div class="row mb-2 text-center elemento align-items-center">
+      <div class="col-3 fw-semibold">Producto B</div>
+      <div class="col-2">1</div>
+      <div class="col-2">$7.500</div>
+      <div class="col-2 text-desc">—</div>
+      <div class="col-3">$7.500</div>
+    </div>
 
-        <!-- Producto 3 -->
-        <div class="elemento row mb-2">
-          <div class="col-md-3 text-center">Producto C</div>
-          <div class="col-md-2 text-center">3</div>
-          <div class="col-md-2 text-center">$2.000</div>
-          <div class="col-md-2 text-center text-desc">-5%</div>
-          <div class="col-md-3 text-center">$5.700</div>
-        </div>
+    <!-- Producto 3 -->
+    <div class="row mb-2 text-center elemento align-items-center">
+      <div class="col-3 fw-semibold">Producto C</div>
+      <div class="col-2">3</div>
+      <div class="col-2">$6.000</div>
+      <div class="col-2 text-desc">-5%</div>
+      <div class="col-3">$5.700</div>
+    </div>
+  </div>
+</div>
 
-        <!-- Subtotal -->
-        <div class="row border-top pt-2 mt-3 fw-bold">
-          <div class="col-md-9 text-end">Subtotal</div>
-          <div class="col-md-3 text-center">$22.200</div>
-        </div>
+<!-- Totales fijos, fuera del scroll -->
+<div class="row border-top pt-2 fw-bold text-center text-md-end mb-1">
+  <div class="col-6 col-md-9 text-start text-md-end">Subtotal</div>
+  <div class="col-6 col-md-3">$22.200</div>
+</div>
 
-        <!-- Descuento global -->
-        <div class="row fw-bold Desc-global">
-          <div class="col-md-9 text-end">Descuento Global</div>
-          <div class="col-md-3 text-center">- $2.200</div>
-        </div>
+<div class="row fw-bold Desc-global text-center text-md-end mb-1">
+  <div class="col-6 col-md-9 text-start text-md-end">Descuento Global</div>
+  <div class="col-6 col-md-3">- $2.200</div>
+</div>
 
-        <!-- Total final -->
-        <div class="row border-top pt-2 fw-bold">
-          <div class="col-md-9 text-end">Total Final</div>
-          <div class="col-md-3 text-center">$20.000</div>
-        </div>
+<div class="row border-top pt-2 fw-bold text-center text-md-end">
+  <div class="col-6 col-md-9 text-start text-md-end">Total Final</div>
+  <div class="col-6 col-md-3">$20.000</div>
+</div>
+
+<!-- Botón Volver centrado -->
+<div class="text-center mt-3">
+  <a href="listaordenes.html" 
+     class="btn btn-sm btn-secondary d-inline-block"
+     style="max-width: 120px;">
+    Volver
+  </a>
+</div>
       </div>
     </div>
   </body>
